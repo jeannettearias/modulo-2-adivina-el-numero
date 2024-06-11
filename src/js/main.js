@@ -10,6 +10,7 @@ const btn = document.querySelector('.js__btn');
 function getRandomNumber(max) {
     return parseInt(Math.random() * max);
    
+
   }
 
   // FUNCTIONS AND EVENTS
@@ -24,12 +25,19 @@ function getValueFromInput() {
     return parseInt(input);
 }
 
+//FUNCTION 
+function printRandomNumber (number) {
+    console.log("Mi número aleatorio es " + number)
+} 
 
     //CLICK BUTTON FUNCTION 
   const handleClickBtn = (ev) => {
     ev.preventDefault();
-
+    
     getValueFromInput();
+
+    printRandomNumber(getRandomNumber(100));
+
 
   };
   
