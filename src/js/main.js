@@ -4,6 +4,7 @@
 
 const inputValue = document.querySelector('.js__input');
 const btn = document.querySelector('.js__btn');
+const randomNumber = getRandomNumber(100);
 
 // GENERATE THE RANDOM NUMBER (1 - 100) TO BE GUESSED 
 
@@ -46,9 +47,7 @@ function compareNumberUser (numberByUser, randomNumber) {
     }
     else if (randomNumber < numberByUser) {
         return "Demasiado alto";
-
     }
-    
 }
 
     //CLICK BUTTON FUNCTION 
@@ -56,8 +55,6 @@ function compareNumberUser (numberByUser, randomNumber) {
     ev.preventDefault();
 
     let numberByUser = getValueFromInput();
-
-    let randomNumber = getRandomNumber(100)
     
     printRandomNumber(randomNumber);
 
