@@ -20,24 +20,50 @@ function getValueFromInput() {
 
     const input = inputValue.value;
 
-    console.log(input);
-
     return parseInt(input);
 }
 
-//FUNCTION 
+// print random number in console  
 function printRandomNumber (number) {
     console.log("Mi número aleatorio es " + number)
 } 
 
+
+// comparison of number obtained vs input by user 
+function compareNumberUser (numberByUser, randomNumber) {
+
+    console.log(numberByUser, randomNumber);
+    if (numberByUser < 1 || numberByUser > 100) {
+        return "El número debe estar entre 1 y 100"
+    }
+
+    if (randomNumber === numberByUser) {
+        return "Has ganado campeona!!!";
+    }
+    else if (randomNumber > numberByUser && numberByUser < 100) {
+        return "Demasiado bajo";
+
+    }
+    else if (randomNumber < numberByUser) {
+        return "Demasiado alto";
+
+    }
+    
+}
+
     //CLICK BUTTON FUNCTION 
   const handleClickBtn = (ev) => {
     ev.preventDefault();
+
+    let numberByUser = getValueFromInput();
+
+    let randomNumber = getRandomNumber(100)
     
-    getValueFromInput();
+    printRandomNumber(randomNumber);
 
-    printRandomNumber(getRandomNumber(100));
+    let game = compareNumberUser(numberByUser,randomNumber);
 
+    console.log(game);
 
   };
   
