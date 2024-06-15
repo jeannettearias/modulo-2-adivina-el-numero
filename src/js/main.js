@@ -1,12 +1,15 @@
 'use strict'
 
-// GLOBAL VARIABLES
+// QUERY SELECTORS SECTION
 
 const inputValue = document.querySelector('.js__input');
 const btn = document.querySelector('.js__btn');
 const randomNumber = getRandomNumber(100);
 const hint = document.querySelector('.js__hint');
 const numberOfTries = document.querySelector('.js__numberOfTries');
+
+// GLOBAL VARIABLES
+
 let count = 0;
 
 
@@ -14,15 +17,12 @@ let count = 0;
 
 function getRandomNumber(max) {
     return parseInt(Math.random() * max);
-
-
 }
 
 // FUNCTIONS AND EVENTS
 
 // GET THE VALUE INPUT BY USER 
 function getValueFromInput() {
-
     const input = inputValue.value;
 
     return parseInt(input);
@@ -34,7 +34,7 @@ function printRandomNumber(number) {
 }
 
 
-// comparison of number obtained vs input by user 
+// obtained number comparison vs input it by user 
 function compareNumberUser(numberByUser, randomNumber) {
 
     console.log(numberByUser, randomNumber);
